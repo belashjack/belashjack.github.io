@@ -1,1 +1,94 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="homepage">
+            <h1 class="game-name">Prodigy Game</h1>
+            <section class="screenshots">
+                <figure class="screenshot">
+                    <img src="./images/screenshot1.png" alt="" width="70%">
+                    <figcaption>Screenshot 1</figcaption>
+                </figure>
+                <figure class="screenshot">
+                    <img src="./images/screenshot2.png" alt=""
+                        width="70%">
+                    <figcaption>Screenshot 2</figcaption>
+                </figure>
+            </section>
+            <section class="play-btn-container">
+                <button class="play-btn">PLAY</button>
+            </section>
+        </div>
+        <div class="gamepage hidden">
+            <header>
+                <section class="info hero-info">
+                    <div class="name">
+                        Hero
+                    </div>
+                    <div class="health">
+                        100/100
+                    </div>
+                </section>
+                <section class="info monster-info">
+                    <div class="name" id="monster-name"></div>
+                    <div class="health">
+                        90/100
+                    </div>
+                </section>
+            </header>
+            <section class="field">
+                <div class="hero">
+                    <object type="image/svg+xml" data="./images/hero.svg" width="200" height="200">
+                    </object>
+                </div>
+                <div class="action">
+                    <button class="btn action-btn">Choose action</button>
+                </div>
+                <div class="monster">
+                    <div class="head">
+                        <img src="./images/coconut.png" alt="" width="100%">
+                    </div>
+                    <div class="body">
+                        <img src="./images/hands.png" alt="" width="100%">
+                    </div>
+                    <div class="legs">
+                        <img src="./images/legs.png" alt="" width="100%">
+                    </div>
+                    <div class="weapon">
+                        <img src="./images/revolver.png" alt="" width="100%">
+                    </div>
+                </div>
+            </section>
+            <div class="modal hidden">
+                <div class="modal-inner">
+                    <div class="close-btn-container">
+                        <span class="close-btn">&#x2715</span>
+                    </div>
+                    <div class="attacks-container">
+                        <div class="attack attack1">
+                            <button class="btn attack-btn">Attack</button>
+                        </div>
+                        <div class="attack attack2">
+                            <button class="btn heal-btn">Heal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="author">Author: Yauheni Belash</p>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
