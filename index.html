@@ -19,25 +19,32 @@
                     <figcaption>Screenshot 1</figcaption>
                 </figure>
                 <figure class="screenshot">
-                    <img src="./images/screenshot2.png" alt=""
-                        width="70%">
+                    <img src="./images/screenshot2.png" alt="" width="70%">
                     <figcaption>Screenshot 2</figcaption>
                 </figure>
             </section>
-            <section class="play-btn-container">
-                <button class="play-btn">PLAY</button>
+            <section class="player-info">
+                <h2>Please, enter the name of your hero</h2>
+                <form action="" name="info">
+                    <label>Hero name:
+                        <input type="text" name="name" tabindex="1" required>
+                    </label>
+                </form>
+            </section>
+            <section class="buttons-container">
+                <button class="page-btn play-btn">PLAY</button>
+                <button class="page-btn scoreboard-btn">Scoreboard</button>
             </section>
         </div>
         <div class="gamepage hidden">
             <header>
                 <section class="info hero-info">
-                    <div class="name">
-                        Hero
-                    </div>
+                    <div class="name" id="hero-name"></div>
                     <div class="health">
                         100/100
                     </div>
                 </section>
+                <section class="round" style="font-size: 2rem"></section>
                 <section class="info monster-info">
                     <div class="name" id="monster-name"></div>
                     <div class="health">
@@ -51,7 +58,7 @@
                     </object>
                 </div>
                 <div class="action">
-                    <button class="btn action-btn">Choose action</button>
+                    <button class="game-btn action-btn">Choose action</button>
                 </div>
                 <div class="monster">
                     <div class="head">
@@ -68,21 +75,62 @@
                     </div>
                 </div>
             </section>
-            <div class="modal hidden">
-                <div class="modal-inner">
+            <div class="modal spells-modal hidden">
+                <div class="spells-modal-inner">
                     <div class="close-btn-container">
                         <span class="close-btn">&#x2715</span>
                     </div>
-                    <div class="attacks-container">
-                        <div class="attack attack1">
-                            <button class="btn attack-btn">Attack</button>
+                    <div class="spells-container">
+                        <div class="spell attack">
+                            <button class="game-btn attack-btn">Attack</button>
                         </div>
-                        <div class="attack attack2">
-                            <button class="btn heal-btn">Heal</button>
+                        <div class="spell heal">
+                            <button class="game-btn heal-btn">Heal</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal task-modal hidden">
+                <div class="task-modal-inner">
+                    <h1 class="task-heading"></h1>
+                    <div class="task-body">
+
+                    </div>
+                    <div class="answer-btn-container">
+                        <button class="answer-btn">Answer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="result-modal hidden">
+                <p>
+                    <span class="result-name">XXX</span>, you defeated
+                    <span class="result-number-of-monsters">5</span> monsters
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Place</td>
+                            <td>Hero name</td>
+                            <td>Monsters defeated</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="scoreboard hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Place</td>
+                        <td>Hero name</td>
+                        <td>Monsters defeated</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </main>
     <footer>
