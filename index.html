@@ -12,19 +12,8 @@
 <body>
     <main>
         <div class="homepage">
-            <h1 class="game-name">Prodigy Game</h1>
-            <section class="screenshots">
-                <figure class="screenshot">
-                    <img src="./images/screenshot1.png" alt="" width="70%">
-                    <figcaption>Screenshot 1</figcaption>
-                </figure>
-                <figure class="screenshot">
-                    <img src="./images/screenshot2.png" alt="" width="70%">
-                    <figcaption>Screenshot 2</figcaption>
-                </figure>
-            </section>
             <section class="player-info">
-                <h2>Please, enter the name of your hero</h2>
+                <h1>Please, enter the name of your hero</h1>
                 <form action="" name="info">
                     <label>Hero name:
                         <input type="text" name="name" tabindex="1" required>
@@ -32,7 +21,7 @@
                 </form>
             </section>
             <section class="buttons-container">
-                <button class="page-btn play-btn">PLAY</button>
+                <button class="page-btn play-btn">Play</button>
                 <button class="page-btn scoreboard-btn">Scoreboard</button>
             </section>
         </div>
@@ -40,16 +29,12 @@
             <header>
                 <section class="info hero-info">
                     <div class="name" id="hero-name"></div>
-                    <div class="health">
-                        100/100
-                    </div>
+                    <div class="health"></div>
                 </section>
                 <section class="round" style="font-size: 2rem"></section>
                 <section class="info monster-info">
                     <div class="name" id="monster-name"></div>
-                    <div class="health">
-                        90/100
-                    </div>
+                    <div class="health"></div>
                 </section>
             </header>
             <section class="field">
@@ -92,26 +77,28 @@
             </div>
             <div class="modal task-modal hidden">
                 <div class="task-modal-inner">
-                    <h1 class="task-heading"></h1>
-                    <div class="task-body">
-
-                    </div>
+                    <h2 class="task-heading"></h2>
+                    <div class="task-body"></div>
                     <div class="answer-btn-container">
-                        <button class="answer-btn">Answer</button>
+                        <button class="page-btn answer-btn">Answer</button>
                     </div>
                 </div>
             </div>
-            <div class="result-modal hidden">
+            <div class="modal result-modal hidden">
+                <section class="result-modal-buttons-container">
+                    <button class="page-btn game-homepage-btn">Homepage</button>
+                    <button class="page-btn game-play-again-btn">Play Again</button>
+                </section>
                 <p>
-                    <span class="result-name">XXX</span>, you defeated
-                    <span class="result-number-of-monsters">5</span> monsters
+                    <span class="result-name"></span>, you defeated
+                    <span class="result-number-of-monsters"></span> monsters
                 </p>
-                <table>
+                <table class="result-table">
                     <thead>
                         <tr>
-                            <td>Place</td>
-                            <td>Hero name</td>
-                            <td>Monsters defeated</td>
+                            <th>Place</th>
+                            <th>Hero name</th>
+                            <th>Monsters defeated</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -120,12 +107,13 @@
             </div>
         </div>
         <div class="scoreboard hidden">
-            <table>
+            <button class="page-btn scoreboard-homepage-btn">Homepage</button>
+            <table class="scoreboard-table">
                 <thead>
                     <tr>
-                        <td>Place</td>
-                        <td>Hero name</td>
-                        <td>Monsters defeated</td>
+                        <th>Place</th>
+                        <th>Hero name</th>
+                        <th>Monsters defeated</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -133,10 +121,18 @@
             </table>
         </div>
     </main>
-    <footer>
-        <p class="author">Author: Yauheni Belash</p>
-    </footer>
+    <script src="./js/hero.js"></script>
+    <script src="./js/monster.js"></script>
+    <script src="./js/basicArithmetic.js"></script>
+    <script src="./js/translation.js"></script>
+    <script src="./js/data.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- Если нажать в Hero Name enter, то происходит ненужное событие submit -->
+<!-- При возвращении на главную страницу после конца игры фокуса на поле имени нет -->
+<!-- Максимальная длина имени?  -->
