@@ -1,0 +1,15 @@
+/* Loading Page CSS */
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.loader {
+    border: 20px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 20px solid #000000;
+    width: 100px;
+    height: 100px;
+    animation: spin 1.4s linear infinite;
+}

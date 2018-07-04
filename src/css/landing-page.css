@@ -54,7 +54,7 @@ main {
 .game-name {
     text-align: center;
     font-size: 10rem;
-    padding: 50px 0px;
+    padding: 75px 0px;
     border-top: 3px solid white;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -88,11 +88,14 @@ main {
     display: flex;
     flex-grow: 1;
     flex-basis: 0;
-    font-size: 2rem;
+    font-size: 3rem;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+}
+.screenshot-description p {
+    text-align: center;
 }
 .screenshot:nth-of-type(2n) .screenshot-description {
     background-color: rgb(255, 255, 255);

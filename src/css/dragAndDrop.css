@@ -1,0 +1,14 @@
+/* Drag&Drop CSS */
+.sortable-block {
+    width: 100%;
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 700;
+}
+.sortable-letter {
+    display: inline-block;
+    margin: 12px;
+    padding: 0px 12px;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: move;
+}

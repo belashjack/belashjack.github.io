@@ -1,0 +1,92 @@
+/* Monster CSS */
+.monster {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.monster-attacked {
+    animation: squeezeMonster 1s ease-in-out 1;
+}
+
+.head {
+    position: absolute;
+    left: calc(50% - 40px);
+    width: 90px;
+    height: 90px;
+    z-index: 3;
+    animation: headAnimation 1s linear infinite;
+}
+
+.body {
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 40px);
+    width: 90px;
+    height: 80px;
+    z-index: 2;
+}
+
+.legs {
+    position: absolute;
+    top: 65%;
+    left: calc(50% - 38px);
+    width: 100px;
+    height: 100px;
+    animation: legsAnimation 1s ease-in-out infinite;
+}
+
+.weapon {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 90px;
+    height: 90px;
+    animation: weaponAnimation 1s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes headAnimation {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 3px;
+    }
+    50% {
+        left: calc(50% - 37px);
+    }
+    85% {
+        /* top: 0px; */
+        /* left: calc(50% - 10px); */
+    }
+    100% {
+        top: 0px;
+        left: calc(50% - 39px);
+    }
+}
+@keyframes weaponAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes legsAnimation {
+    50% {
+        transform: rotate(1deg);
+    }
+}
+@keyframes squeezeMonster {
+    50% {
+        transform: scaleY(0.1);
+        transform-origin: bottom;
+    }
+}
+
+

@@ -1,12 +1,23 @@
 import Hero from './hero';
 import Monster from './monster';
-import { tasks } from './data';
+import Task from './tasks';
 import '../css/style.css';
+import '../css/basicArithmetic.css';
+import '../css/translation.css';
+import '../css/dragAndDrop.css';
+import '../css/loadingPage.css';
+import '../css/homepage.css';
+import '../css/gamepage.css';
+import '../css/taskModal.css';
+import '../css/scoreboard.css';
+import '../css/hero.css';
+import '../css/monster.css';
 
 export class Game {
     constructor() {
         // this.hero = new Hero();
         // this.monster = new Monster();
+        this.task = new Task();
 
         this.round = 0;
         this.timers = [];
@@ -45,8 +56,6 @@ export class Game {
 
         // gamepage (task-modal) elements
         this.taskModal = document.querySelector('.task-modal');
-        this.taskHeading = document.querySelector('.task-heading');
-        this.taskBody = document.querySelector('.task-body');
         this.answerBtn = document.querySelector('.answer-btn');
 
         // gamepage (result-modal) elements
@@ -79,9 +88,11 @@ export class Game {
             this.showTask(event);
         });
         this.answerBtn.addEventListener('click', (event) => {
+            this.taskResult = this.task.getTaskResult();
             this.checkAnswer(event);
         });
         document.body.addEventListener('keypress', (event) => {
+            this.taskResult = this.task.getTaskResult();
             this.checkAnswer(event);
         });
         this.gameHomepageBtn.addEventListener('click', () => {
@@ -90,7 +101,6 @@ export class Game {
         this.gamePlayAgainBtn.addEventListener('click', () => {
             this.restartGame();
         });
-
         this.scoreboardBtn.addEventListener('click', () => {
             this.showScoreboard();
         });
@@ -145,7 +155,7 @@ export class Game {
     showTask(event) {
         this.taskModal.classList.remove('hidden');
         this.spellsModal.classList.add('hidden');
-        this.currentTaskResult = tasks[getRandomInt(0, tasks.length - 1)]();
+        this.task.performRandomTask();
         this.typeOfSpell = event.target;
     }
     checkAnswer(event) {
@@ -159,7 +169,8 @@ export class Game {
         // game.answerBtn.removeEventListener('click', checkAnswer);
         // document.body.removeEventListener('keypress', checkAnswerViaKeyboard);
 
-        const isCorrectAnswer = taskInput.value === String(this.currentTaskResult);
+        const isCorrectAnswer = this.taskResult.includes(taskInput.value);
+
         if (isCorrectAnswer) {
             this.taskModal.firstElementChild.classList.add('correct');
         } else {
@@ -184,7 +195,7 @@ export class Game {
     restoreTask() {
         this.taskModal.classList.add('hidden');
         this.answerBtn.disabled = false;
-        this.taskBody.innerHTML = '';
+        this.task.clearBody();
         this.taskModal.style.opacity = '1';
         this.taskModal.firstElementChild.classList.remove('correct', 'incorrect');
     }

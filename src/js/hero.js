@@ -4,7 +4,7 @@ export default class Hero {
     constructor() {
         this.initialHealth = 100;
         this.health = 100;
-        this.damageValues = [5, 10, 20, 30, 40, 50];
+        this.damageValues = [5, 10, 15, 20, 30, 40, 50];
     }
     create() {
         // hero name

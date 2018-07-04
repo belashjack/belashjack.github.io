@@ -1,0 +1,14 @@
+/* Scoreboard CSS */
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+.homepage-btn {
+    font-size: 4rem;
+    margin: 0px 0px 40px 0px;
+    border-width: 10px;
+}

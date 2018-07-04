@@ -1,0 +1,14 @@
+/* Hero CSS */
+.hero {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 70px;
+    animation: heroAnimation 1s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes heroAnimation {
+    50% {
+        transform: rotate(-1deg);
+    }
+}

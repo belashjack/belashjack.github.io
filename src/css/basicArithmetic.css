@@ -1,0 +1,16 @@
+/* Basic Arithmetic CSS */
+.multiplier, .operation, .calculation-result {
+    margin: 3px;
+    padding: 12px;
+    font-size: 10rem;
+    font-weight: 700;
+}
+.operation {
+    font-weight: 400;
+}
+.calculation-result {
+    text-align: center;
+    width: 230px;
+    outline: black;
+    border: 2px solid black;
+}
