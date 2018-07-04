@@ -9,6 +9,7 @@ import '../css/loadingPage.css';
 import '../css/homepage.css';
 import '../css/gamepage.css';
 import '../css/taskModal.css';
+import '../css/resultModal.css';
 import '../css/scoreboard.css';
 import '../css/hero.css';
 import '../css/monster.css';
